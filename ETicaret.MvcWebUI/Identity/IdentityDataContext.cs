@@ -9,7 +9,7 @@ namespace ETicaret.MvcWebUI.Identity
 {
     public class IdentityDataContext: IdentityDbContext<ApplicationUser>
     {
-        public IdentityDataContext() : base("dataConnection")
+        public IdentityDataContext() : base(ConnectionStringProvider.GetConnectionString())
         {
            
         }

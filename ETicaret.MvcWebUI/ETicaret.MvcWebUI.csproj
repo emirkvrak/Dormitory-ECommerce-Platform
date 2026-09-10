@@ -125,16 +125,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="theme\css\style.css" />
-    <Content Include="theme\html\home.html" />
-    <Content Include="theme\html\product-details.html" />
-    <Content Include="theme\html\product-list.html" />
-    <Content Include="theme\img\Asansor.jpg" />
-    <Content Include="theme\img\NoImage.jpg" />
-    <Content Include="theme\img\porsche.jpeg" />
     <Content Include="theme\js\holder.min.js" />
+    <Content Include="Scripts\jquery-3.7.1.min.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Upload\Asansor.jpg" />
     <Content Include="Upload\BeyazEsya.jpeg" />
     <Content Include="Upload\Bilgisayar.jpeg" />
@@ -146,8 +142,6 @@
     <Content Include="Upload\ColombiaMont.jpg" />
     <Content Include="Upload\Kıyafet.jpeg" />
     <Content Include="Upload\NoImage.jpg" />
-    <Content Include="Upload\pauGiris.jpeg" />
-    <Content Include="Upload\porsche.jpeg" />
     <Content Include="Upload\Takı.jpeg" />
     <Content Include="Upload\Telefon.jpeg" />
     <Content Include="Upload\Telefon1.jpeg" />
@@ -165,6 +159,7 @@
     <Compile Include="Entity\DataContext.cs" />
     <Compile Include="Entity\DataInitializer.cs" />
     <Compile Include="Entity\Product.cs" />
+    <Compile Include="Entity\ConnectionStringProvider.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

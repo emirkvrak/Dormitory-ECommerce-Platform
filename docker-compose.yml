@@ -1,0 +1,15 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: dormitory-ecommerce-db
+    environment:
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+      MSSQL_SA_PASSWORD: ${MSSQL_SA_PASSWORD:-DormitoryDev_2026!Safe}
+    ports:
+      - "14333:1433"
+    volumes:
+      - dormitory-ecommerce-sql-data:/var/opt/mssql
+
+volumes:
+  dormitory-ecommerce-sql-data:
