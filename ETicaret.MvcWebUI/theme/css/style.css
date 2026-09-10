@@ -1,8 +1,7 @@
 .jumbotron {
-    background-image: url("../img/Asansor.jpg");
+    background-image: url("../../Upload/Asansor.jpg");
     background-size: cover;
-    /* height: 100%; */
-    color: #fff; /* Yazıların okunabilirliği için arkaplan rengine uygun bir metin rengi ekledik */
+    color: #fff;
 }
 
 .card_title {

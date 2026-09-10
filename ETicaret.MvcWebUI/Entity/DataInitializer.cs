@@ -11,7 +11,6 @@ namespace ETicaret.MvcWebUI.Entity
         protected override void Seed(DataContext context)
         {
             
-                // Mevcut Seed kodunuz...
                 var kategoriler = new List<Category>()
             {
                 new Category(){ Name = "Kıyafet", Description = "Kıyafet ürünleri",Image = "Kıyafet.jpeg"},
