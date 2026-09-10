@@ -18,8 +18,17 @@ namespace ETicaret.MvcWebUI.Controllers
         // GET: Product
         public ActionResult Index()
         {
-            var products = db.Products.Include(p => p.Categoty);
-            return View(products.ToList());
+            var products = db.Products.Include(p => p.Categoty).ToList();
+
+            foreach (var product in products)
+            {
+                if (string.IsNullOrWhiteSpace(product.Image))
+                {
+                    product.Image = "NoImage.jpg";
+                }
+            }
+
+            return View(products);
         }
 
         // GET: Product/Details/5

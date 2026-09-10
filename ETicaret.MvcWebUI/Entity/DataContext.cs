@@ -9,7 +9,7 @@ namespace ETicaret.MvcWebUI.Entity
     public class DataContext:DbContext
     {
 
-        public DataContext() : base("dataConnection")
+        public DataContext() : base(ConnectionStringProvider.GetConnectionString())
         {
             
         }

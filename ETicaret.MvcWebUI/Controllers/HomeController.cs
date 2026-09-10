@@ -41,14 +41,15 @@ namespace ETicaret.MvcWebUI.Controllers
         {
             var urunler = _context.Products
                 .Where(i => i.IsApproved)
+                .ToList()
                 .Select(i => new ProductModel()
                 {
                     Id = i.Id,
-                    Name = i.Name.Length > 50 ? i.Name.Substring(0, 47) + "..." : i.Name,
-                    Description = i.Description.Length > 50 ? i.Description.Substring(0, 47) + "..." : i.Description,
+                    Name = (i.Name ?? "İsimsiz ürün").Length > 50 ? (i.Name ?? "İsimsiz ürün").Substring(0, 47) + "..." : (i.Name ?? "İsimsiz ürün"),
+                    Description = (i.Description ?? "").Length > 50 ? (i.Description ?? "").Substring(0, 47) + "..." : (i.Description ?? ""),
                     Price = i.Price,
                     Stock = i.Stock,
-                    Image = i.Image ?? "1.jpg",
+                    Image = string.IsNullOrWhiteSpace(i.Image) ? "NoImage.jpg" : i.Image,
                     CategoryId = i.CategoryId
                 }).AsQueryable();
 
