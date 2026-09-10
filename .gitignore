@@ -1,0 +1,61 @@
+# Visual Studio user and cache files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.pidb
+*.pdb
+
+# Build output
+[Bb]in/
+[Oo]bj/
+
+# NuGet packages restored locally
+packages/
+*.nupkg
+
+# Local Docker configuration
+.env
+.env.*
+!.env.example
+
+# Local database files
+App_Data/
+*.db
+*.mdf
+*.ldf
+*.sqlite
+*.sdf
+
+# IDE and temporary workspace files
+.idea/
+*.code-workspace
+*.tmp
+*.bak
+*.orig
+*.rej
+
+# Recoverable local cleanup area
+_trash/
+
+# Publishing and coverage output
+[Pp]ublish/
+artifacts/
+coverage/
+
+# Test output
+TestResults/
+[Tt]est[Rr]esult*/
+
+# Logs and local tooling files
+*.log
+*.cache
+
+# ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# Operating system files
+.DS_Store
+Thumbs.db
